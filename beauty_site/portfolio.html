@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Портфолио — Lumière</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div><h1>Lumière</h1><p class="slogan">Ухаживаем с любовью</p></div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги & цены</a>
+        <a href="portfolio.html" class="active">Портфолио</a>
+        <a href="booking.html">Запись</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title reveal">Портфолио работ</h2>
+    
+    <section class="portfolio-intro reveal" style="margin-bottom:28px;text-align:center;color:#6b7280">
+      <p>Добро пожаловать в нашу галерею красоты! Здесь вы найдёте лучшие работы нашей команды мастеров. Каждая фотография — результат творчества, внимания к деталям и любви к своему делу. Выбирайте интересующую вас категорию и вдохновляйтесь нашими трансформациями!</p>
+    </section>
+
+    <!-- Кнопки фильтра -->
+    <div class="filter-buttons reveal">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="haircut">Стрижки</button>
+      <button class="filter-btn" data-filter="manicure">Маникюр</button>
+      <button class="filter-btn" data-filter="spa">SPA</button>
+      <button class="filter-btn" data-filter="brows">Брови</button>
+      <button class="filter-btn" data-filter="lashes">Ресницы</button>
+      <button class="filter-btn" data-filter="makeup">Макияж</button>
+    </div>
+
+    <!-- Галерея с фильтрацией -->
+    <div class="portfolio-grid reveal" id="portfolioGrid">
+      <!-- Стрижки (3 работы) -->
+      <div class="portfolio-item reveal" data-category="haircut">
+        <a class="thumb" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOlYTULJuRhOHQaj6nJINfAkFteu13vlteeg&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOlYTULJuRhOHQaj6nJINfAkFteu13vlteeg&s" alt="Стрижка 1">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="haircut">
+        <a class="thumb" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzS46UIjKZZ0f3mrhmhGm0-2jktXUrIhp0Dg&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzS46UIjKZZ0f3mrhmhGm0-2jktXUrIhp0Dg&s" alt="Стрижка 2">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="haircut">
+        <a class="thumb" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMppR3XQcd5b33Rz9kfTq5aEaF3COdCLNGQ&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMppR3XQcd5b33Rz9kfTq5aEaF3COdCLNGQ&s" alt="Стрижка 3">
+        </a>
+      </div>
+
+      <!-- Маникюр (3 работы) -->
+      <div class="portfolio-item reveal" data-category="manicure">
+        <a class="thumb" href="https://i.pinimg.com/736x/6f/00/a1/6f00a1b62cc08d7c96384cbe50cfad6c.jpg">
+          <img src="https://i.pinimg.com/736x/6f/00/a1/6f00a1b62cc08d7c96384cbe50cfad6c.jpg" alt="Маникюр 1">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="manicure">
+        <a class="thumb" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl5TX6hxjmbRxMHCu5ocQFdtbf72TQ2chNqg&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl5TX6hxjmbRxMHCu5ocQFdtbf72TQ2chNqg&s" alt="Маникюр 2">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="manicure">
+        <a class="thumb" href="https://masterpiecer-images.s3.yandex.net/df24f9857d7111ee9eb2ceda526c50ab:upscaled">
+          <img src="https://masterpiecer-images.s3.yandex.net/df24f9857d7111ee9eb2ceda526c50ab:upscaled" alt="Педикюр">
+        </a>
+      </div>
+
+      <!-- SPA (3 работы) -->
+      <div class="portfolio-item reveal" data-category="spa">
+        <a class="thumb" href=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCfzK9webkksEbxmg2tYH_jtz7mO8_MFoy2A&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCfzK9webkksEbxmg2tYH_jtz7mO8_MFoy2A&s" alt="SPA 1">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="spa">
+        <a class="thumb" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0I9IotX-BnskOiboHm7p8XTjJQy-VwZuYDg&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0I9IotX-BnskOiboHm7p8XTjJQy-VwZuYDg&s" alt="SPA 2">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="spa">
+        <a class="thumb" href="https://static.tildacdn.com/tild3233-6661-4364-b130-386461386632/1632529995_42-p-bany.jpg">
+          <img src="https://static.tildacdn.com/tild3233-6661-4364-b130-386461386632/1632529995_42-p-bany.jpg" alt="Уход за лицом">
+        </a>
+      </div>
+
+      <!-- Коррекция бровей (2 работы) -->
+      <div class="portfolio-item reveal" data-category="brows">
+        <a class="thumb" href="https://vosksalon.ru/upload/brovi-korrekciya.jpeg">
+          <img src="https://vosksalon.ru/upload/brovi-korrekciya.jpeg" alt="Брови 1">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="brows">
+        <a class="thumb" href="https://lashlevel.ru/thumb/2/oQOV5F9NY4REGPyExkmqvQ/r/d/prprezhivaniebrow_1.jpg">
+          <img src="https://lashlevel.ru/thumb/2/oQOV5F9NY4REGPyExkmqvQ/r/d/prprezhivaniebrow_1.jpg" alt="Брови 2">
+        </a>
+      </div>
+
+      <!-- Наращивание ресниц (2 работы) -->
+      <div class="portfolio-item reveal" data-category="lashes">
+        <a class="thumb" href="https://optim.tildacdn.com/tild3664-3833-4138-a538-303434386637/-/resize/824x/-/format/webp/classic_class_1.jpg.webp">
+          <img src="https://optim.tildacdn.com/tild3664-3833-4138-a538-303434386637/-/resize/824x/-/format/webp/classic_class_1.jpg.webp" alt="Ресницы 1">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="lashes">
+        <a class="thumb" href="https://lashlevel.ru/thumb/2/p4_HVwAw1ovgs5t7kfBUXw/r/d/colornar_2.jpg">
+          <img src="https://lashlevel.ru/thumb/2/p4_HVwAw1ovgs5t7kfBUXw/r/d/colornar_2.jpg" alt="Ресницы 2">
+        </a>
+      </div>
+
+      <!-- Макияж (3 работы) -->
+      <div class="portfolio-item reveal" data-category="makeup">
+        <a class="thumb" href="https://assets.theyou.com/public/thumbs/work_elements/48372/jpg/w1330/h1330/q80/48372/work_elements/fantasy-makeup-women-water.jpg">
+          <img src="https://assets.theyou.com/public/thumbs/work_elements/48372/jpg/w1330/h1330/q80/48372/work_elements/fantasy-makeup-women-water.jpg" alt="Макияж 1">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="makeup">
+        <a class="thumb" href="https://kosmetista.ru/uploads/images/16/20/02/2023/03/28/2b3d61_lbox.jpg">
+          <img src="https://kosmetista.ru/uploads/images/16/20/02/2023/03/28/2b3d61_lbox.jpg" alt="Свадебный макияж">
+        </a>
+      </div>
+      <div class="portfolio-item reveal" data-category="makeup">
+        <a class="thumb" href="https://kosmetista.ru/uploads/images/05/84/31/2016/12/22/ed5d58_lbox.jpg">
+          <img src="https://kosmetista.ru/uploads/images/05/84/31/2016/12/22/ed5d58_lbox.jpg" alt="Вечерний макияж">
+        </a>
+      </div>
+    </div>
+
+    <section class="booking-info reveal" style="margin-top:28px">
+      <h3>Понравилась работа?</h3>
+      <p>Запишитесь на процедуру прямо сейчас и получите скидку 10% на первое посещение!</p>
+      <a class="btn" href="booking.html">Записаться на процедуру</a>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div><h3>Контакты</h3><p>📞 +7 (700) 000-00-00<br>📍 Ул. Примерная, 12</p></div>
+      <div><h3>Соцсети</h3><p><a href="#">Instagram</a></p></div>
+      <div><a class="btn" href="booking.html">Записаться</a></div>
+    </div>
+    <div class="credits">© Lumière, 2025</div>
+  </footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

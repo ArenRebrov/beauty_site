@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Запись — Lumière</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div><h1>Lumière</h1><p class="slogan">Ухаживаем с любовью</p></div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги & цены</a>
+        <a href="booking.html" class="active">Запись</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title reveal">Онлайн-запись</h2>
+
+    <div class="booking-layout reveal">
+      <form id="bookingForm" class="booking-form">
+        <label>Услуга
+          <select id="service" required>
+            <option value="">— Выберите услугу —</option>
+            <option value="Стрижка">Стрижка — 3000 ₸</option>
+            <option value="Окрашивание">Окрашивание — от 6000 ₸</option>
+            <option value="Маникюр">Маникюр — 2500 ₸</option>
+            <option value="Педикюр">Педикюр — 3000 ₸</option>
+            <option value="Уход за лицом">Уход за лицом — от 4000 ₸</option>
+            <option value="SPA">SPA / массаж — от 4500 ₸</option>
+          </select>
+        </label>
+
+        <label>Дата
+          <input id="date" type="date" required>
+        </label>
+
+        <label>Время
+          <select id="time" required>
+            <option value="">— Выберите время —</option>
+          </select>
+        </label>
+
+        <label>Ваше имя
+          <input id="name" type="text" placeholder="Иван Иванов" required>
+        </label>
+
+        <label>Телефон
+          <input id="phone" type="tel" placeholder="+7 (700) 000-00-00" required>
+        </label>
+
+        <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+          <button class="btn" type="submit">Забронировать</button>
+          <button class="btn ghost" type="button" id="clearBtn">Очистить</button>
+        </div>
+      </form>
+
+      <aside class="bookings-panel">
+        <h3>Ближайшие записи</h3>
+        <ul id="bookingsList" class="bookings-list"></ul>
+      </aside>
+    </div>
+
+    <p class="muted">Запись хранится в вашем браузере (локально). Администратор получит уведомление позже (в реальной интеграции — отправка на почту / CRM).</p>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div><h3>Контакты</h3><p>📞 +7 (700) 000-00-00<br>📍 Ул. Примерная, 12</p></div>
+      <div><a class="btn" href="index.html">На главную</a></div>
+    </div>
+    <div class="credits">© Lumière, 2025</div>
+  </footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

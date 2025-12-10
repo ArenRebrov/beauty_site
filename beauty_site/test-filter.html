@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Filter</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .filter-buttons { margin: 20px 0; }
+    .filter-btn { 
+      padding: 10px 15px; 
+      margin: 5px; 
+      border: 2px solid #ccc; 
+      background: #f0f0f0; 
+      cursor: pointer; 
+      border-radius: 5px;
+    }
+    .filter-btn.active { background: #d16aa8; color: white; }
+    .portfolio-item { 
+      display: inline-block; 
+      padding: 10px; 
+      margin: 10px; 
+      border: 1px solid #ddd; 
+      background: #fafafa;
+    }
+    .portfolio-item.hidden { display: none; }
+  </style>
+</head>
+<body>
+
+<h1>Test Filter Buttons</h1>
+
+<div class="filter-buttons">
+  <button class="filter-btn active" data-filter="all">Все</button>
+  <button class="filter-btn" data-filter="haircut">Стрижки</button>
+  <button class="filter-btn" data-filter="manicure">Маникюр</button>
+</div>
+
+<div>
+  <div class="portfolio-item" data-category="haircut">Стрижка 1</div>
+  <div class="portfolio-item" data-category="haircut">Стрижка 2</div>
+  <div class="portfolio-item" data-category="manicure">Маникюр 1</div>
+  <div class="portfolio-item" data-category="manicure">Маникюр 2</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  console.log('DOM loaded');
+  
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  
+  console.log('Found buttons:', filterBtns.length);
+  console.log('Found items:', portfolioItems.length);
+  
+  filterBtns.forEach((btn, index) => {
+    console.log('Adding listener to button', index, 'filter:', btn.getAttribute('data-filter'));
+    
+    btn.addEventListener('click', function(){
+      console.log('Button clicked!', this.getAttribute('data-filter'));
+      
+      const selectedFilter = this.getAttribute('data-filter');
+      
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      
+      portfolioItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if(selectedFilter === 'all' || selectedFilter === itemCategory) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
